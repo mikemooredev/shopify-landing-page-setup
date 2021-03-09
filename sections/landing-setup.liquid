@@ -1,3 +1,5 @@
+{% comment %} This is only rendered in the customiser to allow us/the merchant to set up which section will be used for which page {% endcomment %}
+{% comment %} This div will never get rendered on the frontend {% endcomment %}
 <div style="display:none">
   {%- for index in (1..3) -%}
     {%- assign page_key = "page_" | append: index -%}
@@ -7,6 +9,7 @@
   {%- endfor -%}
 </div>
 
+{% comment %} Specify which page will use which landing section {% endcomment %}
 {% schema %}
 {
   "name": "Landing Setup",
