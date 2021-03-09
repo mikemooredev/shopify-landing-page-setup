@@ -1,7 +1,9 @@
+{% comment %} This is only rendered in the customiser to allow us/the merchant to set up which section will be used for which page {% endcomment %}
 {%- if request.design_mode -%}
   {%- section 'landing-setup' -%}
 {%- endif -%}
 
+{% comment %} Including the section inside a capture doesn't make the section available in the customiser so we need to include twice {% endcomment %}
 {%- capture landing_setup -%}
   {%- section 'landing-setup' -%}
 {%- endcapture -%}
