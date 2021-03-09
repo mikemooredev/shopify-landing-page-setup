@@ -1,0 +1,43 @@
+<div style="display:none">
+  {%- for index in (1..3) -%}
+    {%- assign page_key = "page_" | append: index -%}
+    {%- if request.path == section.settings[page_key] -%}
+    --landing-index:{{- index -}}{%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Landing Setup",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Landing 1"
+    },
+    {
+      "id": "page_1",
+      "type": "url",
+      "label": "Page"
+    },
+    {
+      "type": "header",
+      "content": "Landing 2"
+    },
+    {
+      "id": "page_2",
+      "type": "url",
+      "label": "Page"
+    },
+    {
+      "type": "header",
+      "content": "Landing 3"
+    },
+    {
+      "id": "page_3",
+      "type": "url",
+      "label": "Page"
+    }
+  ]
+}
+{% endschema %}

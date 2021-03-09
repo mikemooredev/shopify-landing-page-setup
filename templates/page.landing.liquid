@@ -1,0 +1,19 @@
+{%- if request.design_mode -%}
+  {%- section 'landing-setup' -%}
+{%- endif -%}
+
+{%- capture landing_setup -%}
+  {%- section 'landing-setup' -%}
+{%- endcapture -%}
+
+{%- if landing_setup contains "--landing-index:1" -%}
+  {%- section 'landing-1' -%}
+{%- endif -%}
+
+{%- if landing_setup contains "--landing-index:2" -%}
+  {%- section 'landing-2' -%}
+{%- endif -%}
+
+{%- if landing_setup contains "--landing-index:3" -%}
+  {%- section 'landing-3' -%}
+{%- endif -%}
